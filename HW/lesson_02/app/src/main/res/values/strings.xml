@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">User Activity</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="send">Send</string>
+    <string name="title_activity_second">User</string>
+</resources>

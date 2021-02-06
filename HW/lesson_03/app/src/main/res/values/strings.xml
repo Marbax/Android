@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">clickable_recycler</string>
+    <string name="show_students">Show Students</string>
+    <string name="user_avatar">UserAvatar</string>
+</resources>

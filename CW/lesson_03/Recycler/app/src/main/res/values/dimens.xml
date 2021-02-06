@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rv_item_height">110dp</dimen>
+    <dimen name="rv_item_name_tSize">30sp</dimen>
+    <dimen name="rv_item_surname_tSize">20sp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="userName">Name</string>
+    <string name="confirm">Confirm</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="Name">Name</string>
+</resources>

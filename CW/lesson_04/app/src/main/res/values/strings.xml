@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie Finder</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="ok">OK</string>
+    <string name="filterquery">FilterQuery</string>
+</resources>
