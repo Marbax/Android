@@ -13,10 +13,10 @@ import com.marbax.movieapi.Const.KEY_DATE_FROM
 import com.marbax.movieapi.Const.KEY_DATE_TO
 import com.marbax.movieapi.Const.KEY_MOVIE_ID
 import com.marbax.movieapi.Const.REQUEST_FILTER_CODE
+import com.marbax.movieapi.Const.RESET_FILTER_CODE
 import com.marbax.movieapi.R
 import com.marbax.movieapi.adapter.MovieAdapter
 import com.marbax.movieapi.filter_activity.FilterActivity
-import com.marbax.movieapi.model.FilterParams
 import com.marbax.movieapi.model.Movie
 import com.marbax.movieapi.movie_details.DetailsActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -62,10 +62,21 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, ClickList
                 dateTo = this.getStringExtra(KEY_DATE_TO)!!
             }
             adapter?.apply {
-                this.setFilterParams(FilterParams(dateFrom, dateTo))
-                this.filter.filter("")
+                presenter.getMoviesByDateRange(dateFrom, dateTo)
+                //this.setFilterParams(FilterParams(dateFrom, dateTo))
+                //this.filter.filter("")
+            }
+        } else if (requestCode == REQUEST_FILTER_CODE && resultCode == RESET_FILTER_CODE) {
+            data?.apply {
+                dateFrom = this.getStringExtra(KEY_DATE_FROM)!!
+                dateTo = this.getStringExtra(KEY_DATE_TO)!!
+            }
+            adapter?.apply {
+                presenter.getMovies()
+                //this.setFilterParams(FilterParams(dateFrom, dateTo))
             }
         }
+
     }
 
     override fun showProgress() {
@@ -78,6 +89,7 @@ class MovieListActivity : AppCompatActivity(), MovieListContract.View, ClickList
 
     override fun submitMovies(movies: List<Movie>?) {
         movies?.apply {
+            moviesList.clear()
             moviesList.addAll(this)
             adapter?.notifyDataSetChanged()
         }

@@ -40,3 +40,9 @@ android dev lessons
 [TMDB Api , MVP architecture, config changed , http supporting packages ](CW/lesson_04 'CW/lesson_04')
 
 </p></details>
+
+<details><summary> 6.Room.Rx </summary><p>
+
+[Room, feature binding, Rx ](CW/lesson_06 'CW/lesson_06')
+
+</p></details>

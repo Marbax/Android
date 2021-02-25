@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.marbax.movieapi.Const.KEY_DATE_FROM
 import com.marbax.movieapi.Const.KEY_DATE_TO
+import com.marbax.movieapi.Const.RESET_FILTER_CODE
 import com.marbax.movieapi.R
 import kotlinx.android.synthetic.main.activity_filter.*
 import java.text.SimpleDateFormat
@@ -39,6 +40,13 @@ class FilterActivity : AppCompatActivity() {
         }
 
         setListeners()
+        btnResetFilters.setOnClickListener {
+            val result = Intent()
+                .putExtra(KEY_DATE_FROM, "")
+                .putExtra(KEY_DATE_TO, "")
+            setResult(RESET_FILTER_CODE, result)
+            finish()
+        }
     }
 
     private fun isFieldsNotEmpty(vararg fields: String): Boolean {

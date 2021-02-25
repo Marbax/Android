@@ -12,6 +12,11 @@ class MovieListPresenter(private val movieListView: MovieListContract.View) :
         movieListModel.getMovieList(this)
     }
 
+    override fun getMoviesByDateRange(dateFrom: String, dateTo: String) {
+        movieListView.showProgress()
+        movieListModel.getMovieListByDateRange(this, dateFrom, dateTo)
+    }
+
     override fun onSuccess(movies: List<Movie>?) {
         movieListView.submitMovies(movies)
         movieListView.hideProgress()

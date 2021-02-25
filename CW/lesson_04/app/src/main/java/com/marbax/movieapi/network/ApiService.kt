@@ -10,7 +10,16 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("movie/popular")
-    fun getmovies(@Query("api_key") apiKey: String = ApiClient.API_KEY):
+    fun getMovies(@Query("api_key") apiKey: String = ApiClient.API_KEY):
+            Call<MovieResponse>
+
+    @GET("discover/movie")
+    fun getMoviesByDateRange(
+        @Query("release_date.gte") dateFrom: String,
+        @Query("release_date.lte") dateTo: String,
+        @Query("sort_by") sortBy: String = ApiClient.API_SORT_BY,
+        @Query("api_key") apiKey: String = ApiClient.API_KEY
+    ):
             Call<MovieResponse>
 
     @GET("movie/{movie_id}")

@@ -13,6 +13,11 @@ interface MovieListContract {
         }
 
         fun getMovieList(onFinishedListener: OnFinishedListener)
+        fun getMovieListByDateRange(
+            onFinishedListener: OnFinishedListener,
+            dateFrom: String,
+            dateTo: String
+        )
     }
 
     interface View {
@@ -26,6 +31,7 @@ interface MovieListContract {
     interface Presenter {
 
         fun getMovies()
+        fun getMoviesByDateRange(dateFrom: String, dateTo: String)
     }
 
 }
