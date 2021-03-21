@@ -46,3 +46,24 @@ android dev lessons
 [Room, feature binding, Rx ](CW/lesson_06 'CW/lesson_06')
 
 </p></details>
+
+<details><summary> 7.GitHub.Fragments.ViewModels </summary><p>
+
+[GitHub Api, Fragments, MVVM, Animations ](CW/lesson_07 'CW/lesson_07')
+[GitHub Api , Room , Caching , android database ](HW/lesson_07 'HW/lesson_07')
+
+</p></details>
+
+
+<details><summary> 8.Btm Nav Menu </summary><p>
+
+[Bottom Navigation Menu Temaplte ](HW/lesson_08 'HW/lesson_07')
+
+</p></details>
+
+
+<details><summary> 9.Dialogs </summary><p>
+
+[Different Dialogs , Custom dialog](CW/lesson_09 'CW/lesson_09')
+
+</p></details>

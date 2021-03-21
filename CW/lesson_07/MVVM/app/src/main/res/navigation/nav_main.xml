@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/usersF">
+
+    <action
+        android:id="@+id/action_global_to_system_dialog"
+        app:destination="@+id/systemDF">
+        <argument
+            android:name="dialog"
+            app:argType="com.example.mvvm.models.SystemDialogModel"/>
+    </action>
+
+    <fragment
+        android:id="@+id/usersF"
+        android:name="com.example.mvvm.ui.fragments.UsersF"
+        android:label="UsersF" >
+        <action
+            android:id="@+id/action_usersF_to_userInfoF"
+            app:destination="@id/userInfoF"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="login"
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoF"
+        android:name="com.example.mvvm.ui.fragments.UserInfoF"
+        android:label="UserInfoF" >
+        <argument
+            android:name="login"
+            app:argType="string"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/systemDF"
+        android:name="com.example.mvvm.ui.fragments.dialogs.SystemDF"
+        android:label="SystemDF">
+        <argument
+            android:name="dialog"
+            app:argType="com.example.mvvm.models.SystemDialogModel"/>
+    </dialog>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">alertDialogs</string>
+    <string name="show_alert">Show Alert</string>
+    <string name="show_date_picker">Show Date Picker</string>
+    <string name="show_time_dialog">Show Time Dialog</string>
+    <string name="show_custom_show">Show Custom Show</string>
+    <string name="confirm">Confirm</string>
+    <string name="show_my_custom_dialog">Show My Custom Dialog</string>
+    <string name="show_through_function">Show Through Function</string>
+</resources>
